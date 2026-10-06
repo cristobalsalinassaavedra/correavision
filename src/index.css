@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1C2B33;
+    background-color: #ffffff;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer utilities {
+  .camera-corner {
+    position: relative;
+  }
+  .camera-corner::before,
+  .camera-corner::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: #1ABC9C;
+    border-style: solid;
+  }
+  .camera-corner::before {
+    top: -2px;
+    left: -2px;
+    border-width: 3px 0 0 3px;
+  }
+  .camera-corner::after {
+    bottom: -2px;
+    right: -2px;
+    border-width: 0 3px 3px 0;
+  }
+}
